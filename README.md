@@ -1,9 +1,9 @@
-#Keskustelusovellus
+# Keskustelusovellus
 
 Keskustelusovelluksessa on kahden tyyppisiä käyttäjiä, normaalit ja ylläpäitäjä.
 Sovelluksessa näkyy kaikki käyttäjän keskustelu alueet. Keskustelualueilla näkyy eri käyttäjien lähettämät viestit. 
 
-##Sovelluksen ominaisuudet:
+## Sovelluksen ominaisuudet:
 
 - Käyttäjä voi luoda uuden tunnuksen tai kirjautua sisään jo järjestelmässä olevalle käyttäjälle.
 - Käyttäjä näkee etusivulla kaikkien ketjujen nimen ja viimeisen viestin sisällön ja ajankohdan
