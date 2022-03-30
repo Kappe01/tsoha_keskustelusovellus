@@ -11,5 +11,5 @@ Sovelluksessa näkyy kaikki käyttäjän keskustelu alueet. Keskustelualueilla n
 - Käyttäjä voi luoda uuden yksityisen ryhmän johon käyttäjä voi itse valita ketkä näkevät ketjun sisällön.
 - Käyttäjä voi lähettää viestin jo olemassa olevaan ketjuun.
 - Käyttäjä voi poistaa/muokata omia viestejään
-- Ylläpitäjä voi poistaa ja lisätä uusia ketjuja
-
+- Ylläpitäjä voi poistaa ketjuja
+- Käyttäjä voi tykätä muiden käyttäjien viesteistä
