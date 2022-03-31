@@ -1,0 +1,12 @@
+Ryhmät:
+<hr>
+{% for room in rooms %}
+<a href="/in_room"> {{ room }} </a>
+<hr>
+{% endfor %}
+{% if session.user_id %}
+Olet kirjautunut sisään.
+<a href="/new_room">Tee uusi ryhmä</a> | <a href="/logout">Kirjaudu ulos</a>
+{% else %}
+<a href="/login">Kirjaudu sisään</a>
+{% endif %}
