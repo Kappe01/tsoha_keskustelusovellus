@@ -1,6 +1,6 @@
-import db
+from db import db
 from flask import session
-import users
+import users, rooms
 
 
 def get_first():
@@ -15,10 +15,11 @@ def get_all():
 
 def send(message):
     user_id = users.user_id()
-    if user_id == 0:
+    room_id = rooms.room_id()
+    if user_id == 0 or room_id == 0:
         return False
     sql = "INSERT INTO messages (message, room_id, user_id, sent) VALUES (:content, :room_id, :user_id, NOW())"
-    db.session.execute(sql, {"message":message, "user_id":user_id})
+    db.session.execute(sql, {"message":message, "room_id":room_id, "user_id":user_id})
     db.session.commit()
     return True
 

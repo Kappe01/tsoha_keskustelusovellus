@@ -1,4 +1,4 @@
-import db
+from db import db
 import messages
 
 def new_like(like):

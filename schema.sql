@@ -1,13 +1,11 @@
 CREATE TABLE users (
-	id SEREIAL PRIMARY KEY,
+	id SERIAL PRIMARY KEY,
 	username TEXT UNIQUE,
-	password TEXT,
-	admin BOOLEAN
+	password TEXT
 );
 CREATE TABLE rooms (
 	id SERIAL PRIMARY KEY,
-	roomname TEXT UNIQUE,
-	user_id INTEGER REFERENCES users
+	roomname TEXT UNIQUE
 );
 CREATE TABLE messages (
 	id SERIAL PRIMARY KEY,
@@ -18,6 +16,5 @@ CREATE TABLE messages (
 );
 CREATE TABLE likes (
 	id SERIAL PRIMARY KEY,
-	like BOOLEAN,
-	message_id INTEGER REFERENCE messages
+	message_id INTEGER REFERENCES messages
 );
