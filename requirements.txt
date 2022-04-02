@@ -221,7 +221,6 @@ python-axolotl-curve25519==0.4.1.post2
 python-dateutil==2.7.3
 python-gitlab==2.0.1
 python-gnupg==0.4.5
-python-magic==0.4.16
 python-pam==1.8.4
 python-slugify==4.0.0
 python-snappy==0.5.3
