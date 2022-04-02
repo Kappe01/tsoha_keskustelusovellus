@@ -149,7 +149,6 @@ numpydoc==0.7.0
 oauth2client==4.1.2
 oauthlib==3.1.0
 olefile==0.46
-onboard==1.4.1
 openpyxl==3.0.3
 OWSLib==0.19.1
 packaging==20.3
