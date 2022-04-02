@@ -1,7 +1,7 @@
-Ryhmät:
 <hr>
+Ryhmät:
 {% for room in rooms %}
-<a href="/in_room"> {{ room }} </a>
+<a href="/room/{{ room.id }}"> {{ room.roomname }} </a>
 <hr>
 {% endfor %}
 {% if session.user_id %}

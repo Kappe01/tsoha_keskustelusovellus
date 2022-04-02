@@ -1,15 +1,13 @@
 <hr>
-{% for message in msg_list %}
-<i>Viesti:</i> {{ message[0] }}
+{% for message in msg %}
+<i>Viesti:</i> {{ message[0] }} | <i>Aika:</i> {{ message[2].strftime("%d-%m-%Y %H:%M") }}
 <p>
 <i>Lähettäjä:</i> {{ message[1] }}
-<p>
-<i>Aika:</i> {{ message[2].strftime("%Y-%m-%d %H:%M:%S") }}
 <hr>
 {% endfor %}
 {% if session.user_id %}
 Olet kirjautunut sisään.
-<a href="/new_message">Lähetä viesti</a> | <a href="/">Takaisin valikkoon</a>
+<a href="/new_message">Lähetä viesti</a> | <a href="/room_logout">Takaisin valikkoon</a>
 {% else %}
-<a href="/login">Kirjaudu sisään</a> | <a href="/">Takaisin valikkoon</a>
+<a href="/login">Kirjaudu sisään</a> | <a href="/room_logout">Takaisin valikkoon</a>
 {% endif %}

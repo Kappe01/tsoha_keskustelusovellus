@@ -2,10 +2,12 @@ from db import db
 from flask import session
 import users
 
+
 def get_rooms():
-    sql = "SELECT roomname FROM rooms ORDER BY id"
+    sql = "SELECT id, roomname FROM rooms ORDER BY id"
     result = db.session.execute(sql)
     return result.fetchall()
+    
 
 def new_room(roomname):
     sql = "INSERT INTO rooms (roomname) VALUES (:roomname)"
@@ -14,5 +16,17 @@ def new_room(roomname):
 
     return True
 
+def login_room(id):
+    sql = "SELECT id FROM rooms WHERE id=:id"
+    result = db.session.execute(sql, {"id":id})
+    room = result.fetchone()
+    if not room:
+        return False
+    session["room_id"] = room.id
+    return True
+
+def logout_room():
+    del session["room_id"]
+
 def room_id():
-    return session.get("room_id", 0)
+    return session.get("room_id",0)
