@@ -162,7 +162,6 @@ patsy==0.5.1
 pbr==5.4.5
 pexpect==4.6.0
 pickleshare==0.7.5
-pikepdf==1.10.3+dfsg
 Pillow==7.0.0
 plotly==4.4.1
 pluggy==0.13.0
