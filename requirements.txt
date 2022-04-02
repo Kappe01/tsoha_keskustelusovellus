@@ -285,7 +285,6 @@ Twisted==18.9.0
 txaio==2.10.0
 typing-extensions==3.7.4.1
 u-msgpack-python==2.1
-unattended-upgrades==0.1
 uncertainties==3.1.2
 Unidecode==1.1.1
 unidiff==0.5.5
