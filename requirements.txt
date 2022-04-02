@@ -43,7 +43,6 @@ constantly==15.1.0
 cryptography==2.8
 cssutils==1.0.2
 csvkit==1.0.2
-cupshelpers==1.0
 cutadapt==2.8
 cwltool==2.0.20200224214940
 cycler==0.10.0
