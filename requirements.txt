@@ -261,7 +261,6 @@ setproctitle==1.1.10
 shellescape==3.4.1
 simplejson==3.16.0
 SimPy==2.3.1
-sip==4.19.21
 six==1.14.0
 sniffio==1.2.0
 soupsieve==1.9.5
