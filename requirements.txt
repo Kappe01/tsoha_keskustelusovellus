@@ -107,7 +107,6 @@ lazr.restfulclient==0.14.2
 lazr.uri==1.0.3
 lazy-object-proxy==1.4.3
 leather==0.3.3
-libhfst-swig==3.15.1b0
 locket==0.2.0
 lockfile==0.12.2
 logilab-common==1.4.3
