@@ -219,7 +219,6 @@ pytest-remotedata==0.3.2
 python-axolotl==0.2.3
 python-axolotl-curve25519==0.4.1.post2
 python-dateutil==2.7.3
-python-debian===0.1.36ubuntu1
 python-gitlab==2.0.1
 python-gnupg==0.4.5
 python-magic==0.4.16
