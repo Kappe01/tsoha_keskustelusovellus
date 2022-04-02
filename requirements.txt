@@ -33,7 +33,6 @@ cbor==1.0.0
 cdo==1.5.3
 certifi==2019.11.28
 cffi==1.15.0
-cftime==1.1.0
 chardet==3.0.4
 chrome-gnome-shell==0.0.0
 Click==7.0
