@@ -258,7 +258,6 @@ SecretStorage==2.3.1
 Send2Trash==1.5.0
 service-identity==18.1.0
 setproctitle==1.1.10
-Shapely==1.7.0
 shellescape==3.4.1
 simplejson==3.16.0
 SimPy==2.3.1
