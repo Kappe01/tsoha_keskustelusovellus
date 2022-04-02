@@ -209,7 +209,6 @@ PyQtWebEngine==5.14.0
 pyraf==2.1.15
 pyRFC3339==1.1
 pyrsistent==0.15.5
-pysvn==1.9.9
 pytest==4.6.9
 pytest-arraydiff==0.3
 pytest-astropy==0.7.0
