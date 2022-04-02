@@ -53,7 +53,6 @@ defusedxml==0.6.0
 Deprecated==1.2.7
 descartes==1.1.0
 distro==1.4.0
-distro-info===0.23ubuntu1
 dnaio==0.4.1
 dnspython==1.16.0
 docutils==0.16
