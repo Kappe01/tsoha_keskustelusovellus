@@ -306,4 +306,3 @@ xmltodict==0.12.0
 xopen==0.8.4
 youtube-dl==2020.3.24
 zipp==1.0.0
-zope.interface==4.7.1
