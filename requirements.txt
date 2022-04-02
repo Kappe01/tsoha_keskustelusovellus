@@ -273,7 +273,6 @@ ssh-import-id==5.10
 stsci.tools==3.6.0
 sympy==1.5.1
 systemd-python==234
-tables==3.6.1
 terminado==0.13.2
 testpath==0.4.4
 tinycss==0.4
