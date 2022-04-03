@@ -1,13 +1,10 @@
-from db import db
 from flask import session
-import users
-
+from db import db
 
 def get_rooms():
     sql = "SELECT id, roomname FROM rooms ORDER BY id"
     result = db.session.execute(sql)
     return result.fetchall()
-    
 
 def new_room(roomname):
     sql = "INSERT INTO rooms (roomname) VALUES (:roomname)"
@@ -29,4 +26,4 @@ def logout_room():
     del session["room_id"]
 
 def room_id():
-    return session.get("room_id",0)
+    return session.get("room_id", 0)

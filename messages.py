@@ -1,5 +1,4 @@
 from db import db
-from flask import session
 import users, rooms
 
 

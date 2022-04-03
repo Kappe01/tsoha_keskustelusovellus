@@ -1,7 +1,8 @@
-from app import app
 from flask import redirect, render_template, request
-import rooms, messages, users
-
+from app import app
+import rooms
+import messages
+import users
 
 @app.route("/")
 def index():
@@ -10,7 +11,7 @@ def index():
 
 @app.route("/new_room")
 def new_room():
-    return render_template("new_room.html")  
+    return render_template("new_room.html")
 
 @app.route("/room_logout")
 def room_logout():
@@ -22,15 +23,13 @@ def make_room():
     roomname = request.form["room"]
     if rooms.new_room(roomname):
         return redirect("/")
-    else:
-        return render_template("error.html", error="Ryhmän luominen epäonnistui")
+    return render_template("error.html", error="Ryhmän luominen epäonnistui")
 
 @app.route("/room/<int:id>")
 def in_room(id):
     if rooms.login_room(id):
         msg_list = messages.get_all()
         return render_template("in_room.html", msg=msg_list)
-    
 
 @app.route("/new_message")
 def new_message():
@@ -41,21 +40,19 @@ def send_message():
     message = request.form["message"]
     if messages.send(message):
         return redirect("/room_logout")
-    else:
-        return render_template("error.html", error="Lähetys epäonnistui")
+    return render_template("error.html", error="Lähetys epäonnistui")
 
-
-@app.route("/login",methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "GET":
         return render_template("login.html")
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
-    if users.login(username,password):
+    if users.login(username, password):
         return redirect("/")
-    else:
-        return render_template("error.html", error="Väärä tunnus tai salasana")
+    
+    return render_template("error.html", error="Väärä tunnus tai salasana")
 
 @app.route("/logout")
 def logout():
@@ -79,5 +76,4 @@ def register():
             
         if users.register(username, password1):
             return redirect("/")
-        else:
-            return render_template("error.html", error="Rekisteröinti ei onnistunut")
+        return render_template("error.html", error="Rekisteröinti ei onnistunut")
