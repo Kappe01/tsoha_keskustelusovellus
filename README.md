@@ -18,3 +18,5 @@ Sovelluksessa näkyy kaikki käyttäjän keskustelu alueet. Keskustelualueilla n
 - Käyttäjä voi poistaa/muokata omia viestejään
 - Ylläpitäjä voi poistaa ketjuja
 - Käyttäjä voi tykätä muiden käyttäjien viesteistä
+
+Sovellus on testattavissa [Herokussa](https://whatsasper.herokuapp.com/)
