@@ -32,3 +32,8 @@ def logout():
 
 def user_id():
     return session.get("user_id", 0)
+
+def get_all():
+    sql = "SELECT id, username FROM users ORDER BY id"
+    result = db.session.execute(sql)
+    return result.fetchall()
