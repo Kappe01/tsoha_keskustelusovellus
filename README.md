@@ -10,13 +10,19 @@ Sovelluksessa näkyy kaikki käyttäjän keskustelu alueet. Keskustelualueilla n
 - Käyttäjä voi luoda uuden julkisen ketjun kaikille käyttäjille antamalla sille otiskon
 - Käyttäjä voi lähettää viestin jo olemassa olevalle ketjulle
 - Käyttäjä voi kirjautua ulos käyttäjältään
+- Viesti ketjun ylläpitäjä voi poistaa ryhmän
+- Käyttäjä voi tykätä muitten viesteistä(viestistä voi tykätä niin monta kertaa kun haluaa)
+- Käyttäjä voi luoda yksityisen ryhmän ja lisätä sinne haluamansa henkilöt yksi kerrallaan
+- Etusivulla näkyy kaikki julkiset ryhmät
 
-## Sovelluksen tulevat ominaisuudet:
+## Sovelluksen mahdolliset jatkokehitys ideat:
 
-- Käyttäjä näkee etusivulla kaikki julkiset ryhmät ja niihin viimeiseksi lähetetty viesti ja viestin lähettäjän ja ajankohdan.
-- Käyttäjä voi luoda uuden yksityisen ryhmän johon käyttäjä voi itse valita ketkä näkevät ketjun sisällön.
-- Käyttäjä voi poistaa/muokata omia viestejään
-- Ylläpitäjä voi poistaa ketjuja
-- Käyttäjä voi tykätä muiden käyttäjien viesteistä
+- Etusivulla näkyy ryhmät ja ryhmään viimeiseksi lähetetty viesti
+- Omia viestejä voisi poistaa/muokata
+- Ryhmään voi lisätä monta käyttäjää yhdellä kertaa
+- Käyttäjä pystyy antamaan vain yhden tykkäyksen/viesti
+- Käyttäjä pystyy tykkäämään tai epätykkäämään viestistä ja molempien määrä näkyy viestin ohessa
+
+
 
 Sovellus on testattavissa [Herokussa](https://whatsasper.herokuapp.com/)
