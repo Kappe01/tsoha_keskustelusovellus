@@ -5,6 +5,7 @@ Sovelluksessa näkyy kaikki käyttäjän keskustelu alueet. Keskustelualueilla n
 
 ## Sovelluksen nykyiset ominaisuudet:
 
+### Kun rekisteröit uuden käyttäjän pitää painaa rekisteröinti painikkeen oikealta puolelta koska jostain syystä "submit" nappulat toimivat samana
 - Käyttäjä voi luoda uuden tunnuksen tai kirjautua sisään jo järjestelmässä olevalle tunnukselle.
 - Käyttäjä näkee etusivulla kaikkien ketjujen nimen
 - Käyttäjä voi luoda uuden julkisen ketjun kaikille käyttäjille antamalla sille otiskon
