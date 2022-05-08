@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Lisää jäseniä</h1>
+{% for message in get_flashed_messages() %}
+    <div class="alert-error">Error: {{ message }}</div>
+{% endfor %}
+<main>
+    <div>
+        <form action="/add_members" method="post">
+            {% for u in user %}
+            <input type="radio" id="users" name="members" value={{ u.id }}>
+            <label for="users">{{ u.username }}</label>
+            {% endfor %}
+            <input id=1 type="submit" value="Lisää käyttäjä">
+        </form>            
+    </div>
+</main>
+{% endblock %}

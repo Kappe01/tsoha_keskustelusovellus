@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
+<h1>Lähetä viesti</h1>
 {% for message in get_flashed_messages() %}
     <div class="alert-error">Error: {{ message }}</div>
 {% endfor %}
-<h1>Lähetä viesti</h1>
 <main>
     <div>
-        <form action="/send_message" method="post">
+        <form action="/send_private_message" method="post">
             <label for="msg">Viesti:</label>
             <textarea name="msg" rows="5" cols="40"></textarea>
             <input id=1 type="submit" value="Lähetä">

@@ -1,6 +1,23 @@
-<form action="/make_room" method="post">
-Ryhmän nimi: <br>
-<textarea name="room" rows="1" cols="20"></textarea>
-<br>
-<input type="submit" value="Luo ryhmä">
-</form>
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Uusi ryhmä</h1>
+{% for message in get_flashed_messages() %}
+    <div class="alert-error">Error: {{ message }}</div>
+{% endfor %}
+<main>
+<div>
+    <form action="/make_room" method="post">
+        <label for="room">Ryhmän nimi:</label>
+        <input type="text" name="room">
+        <label for="private">Yksityinen ryhmä:</label>
+        <input name="private" type="checkbox" value="True" />
+        <input name="private" type="hidden" value="False" />    
+        <input id=1 type="submit" value="Luo ryhmä">
+        <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+        
+
+    </form>
+</div>
+</main>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="parent">
+    <ol>
+        <li>
+            {% for message in m %}
+            <i>Viesti:</i> {{ message[0] }} | <i>Aika:</i> {{ message[2].strftime("%H:%M %d-%m-%Y") }}
+            <p>
+            <i>Lähettäjä:</i> {{ message[1] }} | <a href="/like_private/{{ message[4] }}">Tykkäykset: {{ message[3] }}</a> 
+            {% endfor %}
+        </li>
+    </ol>
+</div>
+<a href="/private_message">Lähetä viesti</a> | <a href="/add_members">Lisää käyttäjiä</a> | <a href="/delete_room">Poista huone</a>
+{% endblock %}                               
+

@@ -1,12 +1,99 @@
-<hr>
-Ryhmät:
-{% for room in rooms %}
-<a href="/room/{{ room.id }}"> {{ room.roomname }} </a>
-<hr>
-{% endfor %}
-{% if session.user_id %}
-Olet kirjautunut sisään.
-<a href="/new_room">Tee uusi ryhmä</a> | <a href="/logout">Kirjaudu ulos</a>
-{% else %}
-<a href="/login">Kirjaudu sisään</a>
-{% endif %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		body {
+			background: lightblue;
+		}
+
+		.bubble {
+			height: 150px;
+			width: 40%;
+			min-width: 200px;
+			background: ivory;
+			display: block;
+			margin: 0 auto;
+			border-radius: 20px;
+			margin-top: 50px;
+			font-size: 100px;
+			text-align: center;
+		}
+
+		.pointer {
+			height: 40px;
+			width: 40px;
+			background: ivory;
+			margin: 0 auto;
+			transform: rotate(45deg);
+			border-radius: 0 0 12px 0;
+			margin-top: -22px;
+			position: relative;
+			left: -200px;
+		}
+
+		form {
+			float: center;
+			padding: 5em;
+			background: cornflowerblue;
+			border-radius: 5em;
+			max-width: 30em;
+			display: grid;
+			grid-template-columns: 10em 15em;
+			grid-row-gap: .5em;
+			margin-bottom: 2em;
+			margin-left: 2em;
+		}
+
+		form label, input{
+			margin: auto 0;
+			font-size: 24px;
+		}
+
+		main {
+			position: relative;
+			height: 200px;
+			width: 60%;
+			margin: 0 auto;
+			padding: 20px;
+			margin-top: 150px;
+		}
+
+		main div {
+			width: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			padding: 20px;
+		}
+
+		.alert-error {
+			background-color: red;
+			color: white;
+			margin-top: 50px;
+		}
+		</style>
+	</head>
+	<body>
+		{% for message in get_flashed_messages() %}
+    		<div class="alert-error">Error: {{ message }}</div>
+		{% endfor %}
+		<div>
+			<div class="bubble">Whatsasper</div>
+			<div class="pointer"></div>
+		</div>
+		<main>
+			<div>
+				<form action="/login" method="post">
+					<label for="username">Tunnus:</label>
+					<input type="text" name="username">
+					<label for="password">Salasana:</label>
+					<input type="password" name="password">
+					<input id="1" type="submit" value="Kirjaudu">
+					<a href="/register"><input id="2" type="submit" value="Luo uusi käyttäjä"></a>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>

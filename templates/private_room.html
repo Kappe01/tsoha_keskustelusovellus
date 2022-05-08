@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Yksityiset ryhmät</h1>
+<div class="parent">
+    <ol>
+        <li>
+            {% for room in rooms %}
+                <a href="/private/{{ room.id }}"> {{room.roomname }} </a>
+            {% endfor %}
+        </li>
+    </ol>
+</div>
+{% endblock %}
+

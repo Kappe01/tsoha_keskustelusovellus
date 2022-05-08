@@ -3,7 +3,7 @@
 <div class="parent">
     <ol>
         <li>
-            {% for message in msg %}
+            {% for message in m %}
             <i>Viesti:</i> {{ message[0] }} | <i>Aika:</i> {{ message[2].strftime("%H:%M %d-%m-%Y") }}
             <p>
             <i>Lähettäjä:</i> {{ message[1] }} | <a href="/like_message/{{ message[4] }}">Tykkäykset: {{ message[3] }}</a> 
@@ -11,5 +11,5 @@
         </li>
     </ol>
 </div>
-<a href="/new_message">Lähetä viesti</a>
+<a href="/new_message">Lähetä viesti</a> | <a href="/delete_room">Poista huone</a>
 {% endblock %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Julkiset ryhmät:</h1>
+<div class="parent">
+    <ol>
+        <li>
+            {% for room in rooms %}
+                <a href="room/{{ room.id }}">{{ room.roomname }}</a>
+            {% endfor %}
+        </li>
+    </ol>
+</div>
+{% endblock %}
